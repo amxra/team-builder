@@ -38,7 +38,7 @@ function Form (props){
     }
     
     return(
-        <form>
+        <form onSubmit = {onSubmit}>
             <label htmlFor = "nameInput">Name</label>
             <input value = {memberForm.name} onChange ={onNameChange}/>
             <label htmlFor = "emailInput">Name</label>
