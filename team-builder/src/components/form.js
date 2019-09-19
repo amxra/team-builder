@@ -9,6 +9,27 @@ const initialMemberForm = {
 
 function Form (props){
     const [memberForm, setMemberForm] = useState(initialMemberForm);
+
+    const onNameChange = e =>{
+        setMemberForm({
+            ...memberForm,
+            name: e.target.value
+        })
+    }
+
+    const onAgeChange = e =>{
+        setMemberForm({
+            ...memberForm,
+            age: e.target.value
+        })
+    }
+
+    const onRoleChange = e =>{
+        setMemberForm({
+            ...memberForm,
+            role: e.target.value
+        })
+    }
     
     return(
         <form>
