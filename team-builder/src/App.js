@@ -10,9 +10,11 @@ const initialMembers = [
   {id: uuid(), name: "Amira", emai: "amira@gmail.com", role: "Frontend"}
 ]
 
-const [members, setMembers] = useState(initialMembers);
+
 
 function App() {
+
+  const [members, setMembers] = useState(initialMembers);
 
   const newMember = member => {
     let team = [...members];
