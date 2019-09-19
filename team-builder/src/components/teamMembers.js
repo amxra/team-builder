@@ -1,19 +1,19 @@
-
 import React from "react";
 
 
 function TeamMember (props){
 
-    const {name, email, role, id, setTeamMember} = props
+    const TeamMemberList = [];
+
+    for (let member of props.TeamMemberList){
+
+        TeamMemberList.push(<div>
+            <p>{member.name}</p>
+        </div>)
+    }
 
     return (
-
-        <p>Name: {name}</p>
-        <p>Email: {email}</p>
-        <p>Role: {role}</p>
-        <button onClick = {
-            e => setTeamMember (e, name, email, role, id)
-        }>Edit</button>
+        <div>{TeamMemberList}</div>
     )
 
 }

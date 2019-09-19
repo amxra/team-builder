@@ -7,8 +7,10 @@ const initialMemberForm = {
     role: ' '
 };
 
+const [memberForm, setMemberForm] = useState(initialMemberForm);
+
 function Form (props){
-    const [memberForm, setMemberForm] = useState(initialMemberForm);
+    
 
     const onNameChange = e =>{
         setMemberForm({
