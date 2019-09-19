@@ -30,6 +30,12 @@ function Form (props){
             role: e.target.value
         })
     }
+
+    const onSubmit = e => {
+        
+        e.preventDefault();
+        props.add(memberForm);
+    }
     
     return(
         <form>
@@ -39,6 +45,7 @@ function Form (props){
             <input value = {memberForm.age} onChange ={onAgeChange}/>
             <label htmlFor = "roleInput">Name</label>
             <input value = {memberForm.role} onChange ={onRoleChange}/>
+            <button onClick = {onSubmit}>Submit</button>
         </form>
     )
 }
