@@ -34,11 +34,11 @@ function Form (props){
     return(
         <form>
             <label htmlFor = "nameInput">Name</label>
-            <input value = {memberForm.name}/>
+            <input value = {memberForm.name} onChange ={onNameChange}/>
             <label htmlFor = "ageInput">Name</label>
-            <input value = {memberForm.age}/>
+            <input value = {memberForm.age} onChange ={onAgeChange}/>
             <label htmlFor = "roleInput">Name</label>
-            <input value = {memberForm.role}/>
+            <input value = {memberForm.role} onChange ={onRoleChange}/>
         </form>
     )
 }
