@@ -3,7 +3,7 @@ import React, {useState} from "react";
 
 const initialMemberForm = {
     name: ' ',
-    age: ' ',
+    email: ' ',
     role: ' '
 };
 
@@ -17,10 +17,10 @@ function Form (props){
         })
     }
 
-    const onAgeChange = e =>{
+    const onEmailChange = e =>{
         setMemberForm({
             ...memberForm,
-            age: e.target.value
+            email: e.target.value
         })
     }
 
@@ -41,9 +41,9 @@ function Form (props){
         <form>
             <label htmlFor = "nameInput">Name</label>
             <input value = {memberForm.name} onChange ={onNameChange}/>
-            <label htmlFor = "ageInput">Name</label>
-            <input value = {memberForm.age} onChange ={onAgeChange}/>
-            <label htmlFor = "roleInput">Name</label>
+            <label htmlFor = "emailInput">Name</label>
+            <input value = {memberForm.email} onChange ={onEmailChange}/>
+            <label htmlFor = "roleInput">Emai</label>
             <input value = {memberForm.role} onChange ={onRoleChange}/>
             <button onClick = {onSubmit}>Submit</button>
         </form>
